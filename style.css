@@ -1,0 +1,149 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: 0;
+}
+:root{
+--Blue: hsl(223, 87%, 63%);
+--PaleBlue: hsl(223, 100%, 88%);
+--LightRed: hsl(354, 100%, 66%);
+--Gray: hsl(0, 0%, 59%);
+--VeryDarkBlue: hsl(209, 33%, 12%);
+}
+body{
+    font-family: "Libre Franklin", sans-serif;
+    width: 100%;
+    overflow-x: hidden;
+}
+main .container{
+    margin: 50px;
+    width: 100%;
+}
+main .container .content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+main .container .content h1{
+    font-family: "Libre Franklin";
+    font-weight: 700;
+    margin-top: 40px;
+}
+main .container .content h1 span{
+    display: inline-block;
+    color: var(--Gray);
+    font-weight: 300;
+}
+main .container .content p{
+    font-family: inherit;
+    font-weight: 300;
+    font-size: 20px;
+    color: var(--Gray);
+    margin: 20px 0;
+}
+main .container .content .launching-box{
+    margin-top: 30px;
+}
+main .container .content .launching-box input{
+    padding: 15px 20px;
+    width: 300px;
+    border: none;
+    outline: none;
+    border: 1px solid var(--Gray);
+    border-radius: 20px;
+}
+main .container .content .launching-box #message.active{
+    color: var(--LightRed);
+    font-size: 16px;
+    font-family: inherit;
+    font-weight: 300;
+    display: block;
+    margin: 10px 0 0 30px;
+}
+main .container .content .launching-box  button{
+    padding: 15px 30px ;
+    outline: none;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--Blue);
+    color: #fff;
+    margin-left: 10px;
+    font-weight: 600;
+    cursor: pointer;
+}
+main .container .content .dashboard{
+   width: clamp(500px,50%,600px);
+   margin: 80px 0 0 0;
+}
+main .container .content .social{
+    margin-top: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+main .container .content .social a{
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    line-height: 30px;
+    border: 1px solid var(--Gray);
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.6s;
+}
+main .container .content .social a:hover{
+    background-color: var(--Blue);
+   
+}
+
+main .container .content .social i{
+    color: var(--Blue);
+    display: inline-block;
+    margin-right: 30px;
+    padding-left:8px;
+    transition: all 0.6s;
+    cursor: pointer;
+}
+main .container .content .social i:hover{
+    color: #fff;
+}
+@media(max-width:480px){
+    main .container .content .launching-box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+      main .container .content .launching-box button {
+        padding: 15px 145px;
+        margin-left: 5px;
+        position: absolute;
+        top: 358px;
+        font-weight: 600;
+      }
+      main .container .content .dashboard {
+        width: clamp(400px,50%,600px);
+        margin: 141px 0 0 0;
+      }
+      main .container .content .social {
+        margin-top: 52px;
+      }
+}
+@media(max-width:375px){
+   main .container .content {
+  margin-right: 30px;
+  }
+  main .container .content .launching-box button {
+    padding: 15px 131px;
+    margin-left: 0px;
+    position: absolute;
+    top: 358px;
+    font-weight: 600;
+  }
+  main .container .content .dashboard {
+    width: clamp(335px,50%,600px);
+  }
+}
